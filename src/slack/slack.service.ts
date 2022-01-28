@@ -10,7 +10,7 @@ export class SlackService {
   ) {
   }
 
-  sendNotification(type: SlackMessageType, data: any) {
+  sendNotification(type: SlackMessageType, data: any):Promise<any> {
     return this.http.post(process.env.CONTACT_US_SLACK_WEBHOOK_URL, buildSlackMessage(type, data)).toPromise();
   }
 }

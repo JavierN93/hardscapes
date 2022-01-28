@@ -17,7 +17,7 @@ export class DynamoDBTransport extends Transport {
   constructor(opts: Options) {
     super(opts);
     aws.config.update({ region: opts.region });
-    this.ddb = new aws.DynamoDB({ apiVersion: '2012-08-10' });
+    this.ddb = new aws.DynamoDB({ apiVersion: '2020-08-27' });
     this.tableName = opts.tableName;
   }
 

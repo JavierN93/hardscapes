@@ -176,7 +176,7 @@ export class PaymentService {
   private initStripe() {
     if (!this.stripe) {
       this.stripe = new Stripe(process.env.STRIPE_SK, {
-        apiVersion: '2020-03-02',
+        apiVersion: '2020-08-27',
         typescript: true,
       });
     }
